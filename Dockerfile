@@ -1,6 +1,10 @@
 # Copyright 2016, EMC, Inc.
 
-FROM rackhd/on-core:devel
+ARG repo=rackhd
+ARG tag=devel
+
+FROM ${repo}/on-core:${tag} 
+
 
 COPY . /RackHD/on-syslog/
 WORKDIR /RackHD/on-syslog
